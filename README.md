@@ -10,3 +10,10 @@ python robust_fileserver.py --host 0.0.0.0 --port 9000 --dir /path/to/files --ch
 #   --port: Port number (default: 8000)
 #   --dir: Directory to serve (default: /data/)
 #   --chunk-size: Chunk size in KB (default: 1024)
+
+Testing Resume Capability:
+bash# Using wget with resume support
+wget -c http://server:8000/largefile.zip
+
+# Using curl with resume support
+curl -C - -O http://server:8000/largefile.zip
